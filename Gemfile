@@ -10,6 +10,7 @@ gem 'rails', '~> 5.1.4'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 gem 'puma', '~> 3.7'
 
+# https://richonrails.com/articles/google-authentication-in-ruby-on-rails
 gem 'omniauth-google-oauth2'
 
 group :development, :test do
