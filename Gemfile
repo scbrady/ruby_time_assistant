@@ -12,6 +12,13 @@ gem 'puma', '~> 3.7'
 
 # https://richonrails.com/articles/google-authentication-in-ruby-on-rails
 gem 'omniauth-google-oauth2'
+gem 'google_assistant'
+
+# https://gorails.com/deploy/ubuntu/16.04
+gem 'capistrano', '~> 3.7', '>= 3.7.1'
+gem 'capistrano-rails', '~> 1.2'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
