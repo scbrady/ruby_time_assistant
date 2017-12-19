@@ -22,8 +22,8 @@ module TimeApi
     config.load_defaults 5.1
 
     # OmniAuth needs these
-    config.middleware.insert_after ActiveRecord::Migration::CheckPending, ActionDispatch::Cookies
-    config.middleware.insert_after ActionDispatch::Cookies, ActionDispatch::Session::CookieStore
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
