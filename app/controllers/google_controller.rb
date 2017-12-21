@@ -1,4 +1,4 @@
-class SpeechController < ApplicationController
+class GoogleController < ApplicationController
 
   def index
     json_response(message: 'authed')

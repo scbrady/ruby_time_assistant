@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'auth/failure', to: 'sessions#failure'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
-  post '/speech' => 'speech#conversation'
+  post '/alexa' => 'alexa#conversation'
 
   root 'speech#index'
 end

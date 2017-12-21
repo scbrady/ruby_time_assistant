@@ -12,7 +12,7 @@ gem 'puma', '~> 3.7'
 
 # https://richonrails.com/articles/google-authentication-in-ruby-on-rails
 gem 'omniauth-google-oauth2'
-gem 'google_assistant', :git => 'git://github.com/armilam/google-assistant-ruby', :branch => 'assistant-api-v2'
+gem 'alexa_ruby'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
