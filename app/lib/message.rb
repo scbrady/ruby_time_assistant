@@ -10,4 +10,12 @@ class Message
   def self.unauthorized
     'Unauthorized request'
   end
+
+  def self.welcome
+    'Howdy, boss!'
+  end
+
+  def self.goodbye
+    'Ok, goodbye!'
+  end
 end
