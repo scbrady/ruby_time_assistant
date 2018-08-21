@@ -6,8 +6,8 @@ class AlexaController < ApplicationController
       resp = AlexaController.send(alexa.request.type, alexa)
 
       alexa.response.tell(resp) if resp.is_a? String
-    #rescue NoMethodError
-    #  @@alexa.response.tell("Sorry, I don't know that one yet!")
+    rescue NoMethodError
+      alexa.response.tell("Sorry, I don't know that one yet!")
     end
 
     json_response alexa.response.json
@@ -25,7 +25,10 @@ class AlexaController < ApplicationController
     intent = alexa.request.intent_name.underscore
     input = self.slots_to_input(alexa.request.slots)
 
-    Assistant.send(intent, input) {|message| alexa.response.ask(message) }
+    Assistant.send(intent, input) {|message|
+      alexa.response.ask(message)
+      alexa.response.add_session_attribute('directives', 'blah')
+    }
   end
 
   def self.session_ended(alexa)
